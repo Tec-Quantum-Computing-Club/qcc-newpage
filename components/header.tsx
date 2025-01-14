@@ -8,12 +8,12 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/" className="text-primary font-bold text-xl">
-              QCC
+              <img src="/logo1.svg" alt="QCC Logo" className="h-8 w-auto" />
             </Link>
             <nav className="hidden md:flex ml-10 space-x-8">
-            <Link href="#" className="text-foreground hover:text-primary">Home</Link>
+            <Link href="/" className="text-foreground hover:text-primary">Home</Link>
               <Link href="#" className="text-foreground hover:text-primary">About us</Link>
-              <Link href="#" className="text-foreground hover:text-primary">Resources</Link>
+              <Link href="/resources" className="text-foreground hover:text-primary">Resources</Link>
               <Link href="#" className="text-foreground hover:text-primary">Contact</Link>
 
                <Link 

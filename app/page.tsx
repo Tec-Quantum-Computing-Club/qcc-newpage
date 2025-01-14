@@ -2,7 +2,6 @@ import { Header } from '../components/header'
 import { Hero } from '../components/hero'
 import { Logos } from '../components/logos'
 import { Features } from '../components/features'
-import { Footer } from '../components/footer'
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <Features />
         <Logos />
       </main>
-      <Footer />
     </div>
   )
 }
