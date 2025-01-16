@@ -17,7 +17,7 @@ export default function ScrambleText({ text, className }: ScrambleTextProps) {
     const maxIterations = 8 // Changed from 15
 
     const interval = setInterval(() => {
-      setDisplayText(prev => {
+      setDisplayText(() => {
         const scrambled = text.split('').map((char, index) => {
           if (index < currentIndex) {
             return text[index]

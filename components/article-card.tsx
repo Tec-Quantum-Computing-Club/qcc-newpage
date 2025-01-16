@@ -35,7 +35,7 @@ export function ArticleCard({
   views,
   comments,
   image,
-  featured,
+  
 }: ArticleCardProps) {
   return (
     <Card className="border-0 shadow-none">
