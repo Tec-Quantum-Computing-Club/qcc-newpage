@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useState, useEffect } from "react"
-import { Cpu, Users, Trophy, Calendar, ArrowRight, Sparkles } from 'lucide-react'
+import { Cpu, Users, Trophy, Calendar, ArrowRight } from 'lucide-react'
 import ParticleBackground from "@/components/particle-background"
 import CountdownTimer from "@/components/countdown-timer"
 import ScrambleText from "@/components/scramble-text"
