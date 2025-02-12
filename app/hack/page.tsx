@@ -1,13 +1,14 @@
-'use client'
+"use client"
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useState, useEffect } from "react"
-import { Cpu, Users, Trophy, Calendar, ArrowRight } from 'lucide-react'
+import { Cpu, Users, Trophy, Calendar, ArrowRight } from "lucide-react"
 import ParticleBackground from "@/components/particle-background"
 import CountdownTimer from "@/components/countdown-timer"
 import ScrambleText from "@/components/scramble-text"
+import Link from "next/link"
 
 export default function WelcomePage() {
   const [mounted, setMounted] = useState(false)
@@ -21,7 +22,17 @@ export default function WelcomePage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <ParticleBackground />
-      
+
+      {/* Login and Register Buttons */}
+      <div className="absolute top-4 right-4 flex gap-2 z-50">
+        <Button variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-950" asChild>
+          <Link href="/auth">Log In</Link>
+        </Button>
+        <Button className="bg-gradient-to-r from-blue-600/50 to-purple-600/50" asChild>
+          <Link href="/auth?tab=register">Register</Link>
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <section className="relative min-h-dvh flex flex-col items-center justify-center px-4">
         <motion.div
@@ -38,15 +49,11 @@ export default function WelcomePage() {
             <ScrambleText text="2025" />
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300">
-            First on-site Quantum Computing Hackathon in Mexico.
-          </p>
-          <p className="text-xl md:text-1xl text-gray-300">
-          Join us for a weekend of innovation and learning!
-          </p>
+          <p className="text-xl md:text-2xl text-gray-300">First on-site Quantum Computing Hackathon in Mexico.</p>
+          <p className="text-xl md:text-1xl text-gray-300">Join us for a weekend of innovation and learning!</p>
           <CountdownTimer targetDate="2025-06-05" />
           <div className="flex flex-wrap gap-4 justify-center mt-8">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600/50 to-purple-600/50 cursor-not-allowed opacity-50" disabled>
+            <Button size="lg" className="bg-gradient-to-r from-blue-600/50 to-purple-600/50">
               Register Now
               <ArrowRight className="ml-2" />
             </Button>
@@ -60,7 +67,7 @@ export default function WelcomePage() {
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -96,22 +103,22 @@ const features = [
   {
     title: "Quantum Workshops",
     description: "Learn from industry experts about quantum computing principles and practical applications.",
-    icon: Cpu
+    icon: Cpu,
   },
   {
     title: "Team Building",
     description: "Connect with like-minded innovators and form teams to tackle quantum challenges.",
-    icon: Users
+    icon: Users,
   },
   {
     title: "Amazing Prizes",
     description: "Win exciting prizes and opportunities to further your quantum computing journey.",
-    icon: Trophy
+    icon: Trophy,
   },
   {
     title: "48 Hour Sprint",
     description: "Two days of intensive coding, learning, and breakthrough moments.",
-    icon: Calendar
-  }
+    icon: Calendar,
+  },
 ]
 
