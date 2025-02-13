@@ -54,7 +54,7 @@ export default function WelcomePage() {
           <CountdownTimer targetDate="2025-06-05" />
           <div className="flex flex-wrap gap-4 justify-center mt-8">
             <Button size="lg" className="bg-gradient-to-r from-blue-600/50 to-purple-600/50">
-              Register Now
+            <Link href="/auth">Register Now</Link>
               <ArrowRight className="ml-2" />
             </Button>
             <Button size="lg" variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-950">
